@@ -1,23 +1,9 @@
-# AREP-Laboratorio #3
-[![Heroku](https://heroku-badge.herokuapp.com/?app=peaceful-sands-20735)](https://peaceful-sands-20735.herokuapp.com)
-[![CircleCI](https://circleci.com/gh/Jmjimmy20/AREP-L3/tree/master.svg?style=svg)](https://circleci.com/gh/Jmjimmy20/AREP-L3/tree/master)
+# AREP-Laboratorio #4
+[![Heroku](https://heroku-badge.herokuapp.com/?app=peaceful-sands-20735)](https://mysterious-brook-32713.herokuapp.com)
+[![CircleCI](https://circleci.com/gh/Jmjimmy20/AREP-L3/tree/master.svg?style=svg)](https://circleci.com/gh/Jmjimmy20/AREP-Lab4/tree/master)
 
-Laboratorio #3 de la materia Arquitectura Empresariales 2020-1
+Laboratorio #4 de la materia Arquitectura Empresariales 2020-1
 Reto 01
-
-# Descripción Ret 1
-
-Laboratorio enfocado al uso de cliente servidor y despliegue web
-
-# Descripción Reto 2
-
-Lectura de bases de datos
-
-![](img/get.PNG)
-![](img/bd1.PNG)
-![](img/bd2.PNG)
-
-
 
 # Inicio
   # - Requisitos
@@ -36,6 +22,5 @@ Lectura de bases de datos
      
      
 [maven]: <https://maven.apache.org/>
-[java]: <https://www.java.com/es/download/>   
-[Latex]:  <https://www.overleaf.com/read/vhmkqscvwbhk>
-[Heroku]: <https://peaceful-sands-20735.herokuapp.com>
+[java]: <https://www.java.com/es/download/>
+[Heroku]: <https://mysterious-brook-32713.herokuapp.com>
