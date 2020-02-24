@@ -3,6 +3,12 @@ package edu.escuelaing.arep.app.framework;
 import java.io.*;
 import java.net.*;
 import java.util.Date;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
+
+import edu.escuelaing.arep.app.framework.DataBase;
 
 public class Servidor {
 
@@ -18,17 +24,17 @@ public class Servidor {
 
     String contentType;
     String inputLine, archivo = "/";
-    
-    /**
-     * metodo para arrancar el servidor
-     * @param args
-     * @throws IOException
-     */
-    public static void main(String[] args) throws IOException{
-        new Servidor();
+
+
+    String Tcontenido;
+    private Map<String,Method> URLmap = new HashMap<String, Method>();
+
+    public Servidor(Map<String,Method> url) throws IOException{
+
+        this.URLmap = url;
     }
 
-    public Servidor() throws IOException{
+    public void Start() throws IOError, IOException {
         
         while(true){
             Port = getPort();          
@@ -56,6 +62,14 @@ public class Servidor {
 
             if(archivo.equals(" ") || archivo.equals("/")) {
                 archivo = "notfound.html";
+            }
+
+            if (archivo.equals("editores ")){
+                MostrarPaginaDB();
+            }
+
+            else if (archivo.startsWith("api")){
+                MostrarPaginaAPI();
             }
 
             if(!archivo.equals("/")){
@@ -164,6 +178,37 @@ public class Servidor {
         
     }
 
+    public void MostrarPaginaAPI(){
+        Method metodo = URLmap.get(archivo.substring(archivo.indexOf("/"), archivo.length()-1));
+      String res = "";
+      if (!metodo.equals(null)) {
+         try {
+            res = (String) metodo.invoke(null);
+         } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+            e.printStackTrace();
+            res = "<center><h1>No se encuentra el handler</h1></center>";
+         }
+      }
+
+      String resString = 
+         "HTTP/1.1 200 Ok\r\n" + 
+         "Content-type: " + "text/html" + "\r\n" + 
+         "Server: Java HTTP Server\r\n" + 
+         "Date: " + new Date() + "\r\n" + 
+         "\r\n" +
+         "<!DOCTYPE html>" + 
+            "<html>" + 
+            "<head>" + 
+            "<meta charset=\"UTF-8\">" + 
+            "<title>Base de datos</title>\n" + 
+            "</head>" + 
+            "<body>" + 
+            res +
+            "</body>" + 
+            "</html>";
+      printWriter.println(resString);
+    } 
+
     /**
      * Metodo en el cual se genera una pagina en la cual se muestraque el tipo de archivo buscado no se encuentra en los recursos
      */
@@ -266,5 +311,29 @@ public class Servidor {
 
         
     }
+
+    public void MostrarPaginaDB() {
+        String res = DataBase.getData();
+        String outString = 
+           "HTTP/1.1 200 Ok\r\n" + 
+           "Content-type: " + "text/html" + "\r\n" + 
+           "Server: Java HTTP Server\r\n" + 
+           "Date: " + new Date() + "\r\n" + 
+           "\r\n" +
+           "<!DOCTYPE html>" + 
+              "<html>" + 
+              "<head>" + 
+              "<meta charset=\"UTF-8\">" + 
+              "<title>editores</title>\n" + 
+              "</head>" + 
+              "<body>" + 
+              "<center>" +
+              "<h1>Nombre editores</h1></br>" +
+              res + 
+              "</center>" + 
+              "</body>" + 
+              "</html>";
+           printWriter.println(outString);
+     }
 
 }

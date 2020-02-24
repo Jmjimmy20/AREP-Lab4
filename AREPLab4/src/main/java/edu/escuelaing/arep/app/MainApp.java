@@ -1,7 +1,7 @@
 package edu.escuelaing.arep.app;
 
 import java.io.IOException;
-import edu.escuelaing.arep.app.Servidor;
+import edu.escuelaing.arep.app.framework.Servidor;
 
 public class MainApp{
 
