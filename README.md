@@ -17,6 +17,9 @@ Reto 01
    
  # Heroku
    * [Heroku]
+   
+ # HerokuPojo
+   * [HerokuPojo]
   
      
      
@@ -24,3 +27,5 @@ Reto 01
 [maven]: <https://maven.apache.org/>
 [java]: <https://www.java.com/es/download/>
 [Heroku]: <https://mysterious-brook-32713.herokuapp.com>
+[HerokuPojo]: <https://mysterious-brook-32713.herokuapp.com/api/helloPojo/hello>
+
