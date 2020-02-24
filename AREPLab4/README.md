@@ -1,10 +1,23 @@
-# AREP-Laboratorio #2
+# AREP-Laboratorio #3
+[![Heroku](https://heroku-badge.herokuapp.com/?app=peaceful-sands-20735)](https://peaceful-sands-20735.herokuapp.com)
+[![CircleCI](https://circleci.com/gh/Jmjimmy20/AREP-L3/tree/master.svg?style=svg)](https://circleci.com/gh/Jmjimmy20/AREP-L3/tree/master)
 
-Laboratorio #2 de la materia Arquitectura Empresariales 2020-1
+Laboratorio #3 de la materia Arquitectura Empresariales 2020-1
+Reto 01
 
-# Descripción
+# Descripción Ret 1
 
-Laboratorio realizado para generar una implementacion en heroku usando el lab 01
+Laboratorio enfocado al uso de cliente servidor y despliegue web
+
+# Descripción Reto 2
+
+Lectura de bases de datos
+
+![](img/get.PNG)
+![](img/bd1.PNG)
+![](img/bd2.PNG)
+
+
 
 # Inicio
   # - Requisitos
@@ -12,9 +25,6 @@ Laboratorio realizado para generar una implementacion en heroku usando el lab 01
    * [maven]
 
    * [java]
-    
-  # - Pruebas
-    Para la realizacion de las pruebas , se utulizo los datos entregados por el profesor
  
  # Latex
    * [Latex]
@@ -27,5 +37,5 @@ Laboratorio realizado para generar una implementacion en heroku usando el lab 01
      
 [maven]: <https://maven.apache.org/>
 [java]: <https://www.java.com/es/download/>   
-[Latex]:  <https://www.overleaf.com/read/vmfbjktpgtjx>
-[Heroku]: <https://floating-lowlands-19774.herokuapp.com/calc>
+[Latex]:  <https://www.overleaf.com/read/vhmkqscvwbhk>
+[Heroku]: <https://peaceful-sands-20735.herokuapp.com>
