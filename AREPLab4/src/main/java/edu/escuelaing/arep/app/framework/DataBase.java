@@ -19,11 +19,11 @@ public class DataBase {
     String res = "";
     try {
       Class.forName("org.postgresql.Driver");
-      String host = "ec2-3-234-109-123.compute-1.amazonaws.com";
-      String db = "deq208d0vecg75";
+      String host = "ec2-35-172-85-250.compute-1.amazonaws.com";
+      String db = "d9dfpgdk2p7j1c";
       String port = "5432";
-      String user = "smtktknjrcgusb";
-      String passwd = "0acd1b131fe78d50cfafc73df0d67303ebe829faecfa9055d89597c61ebf83a6";
+      String user = "hdequjdjitaosq";
+      String passwd = "7d9f608c7e8f8ac5fbc75f99dd73ce98ca44cf648081a5b17e5f5ea95993c345";
       Connection con = DriverManager.getConnection("jdbc:postgresql://" + host + ":" + port + "/" + db, user, passwd);
       Statement stmt = con.createStatement();
       ResultSet rs = stmt.executeQuery("select * from Reto2");
