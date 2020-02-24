@@ -1,5 +1,4 @@
 edu\escuelaing\arep\app\framework\annotatations\webAnotac.class
-edu\escuelaing\arep\app\Servidor.class
 edu\escuelaing\arep\app\framework\DataBase.class
 edu\escuelaing\arep\app\pojos\webP.class
 edu\escuelaing\arep\app\MainApp.class
