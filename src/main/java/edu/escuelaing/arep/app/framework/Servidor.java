@@ -72,7 +72,7 @@ public class Servidor {
                 MostrarPaginaAPI();
             }
 
-            if(!archivo.equals("/")){
+            else if(!archivo.equals("/")){
 
                 CreacionArchivo();
             }
